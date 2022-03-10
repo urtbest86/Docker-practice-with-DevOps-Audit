@@ -1,0 +1,17 @@
+# Local .terraform directories
+.terraform/
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
+
+# # .tfvars files
+*.tfvars
+
+# etc
+*.vsix
+node_modules/
+.taskkey
+.env
+.bin/
+.dist/

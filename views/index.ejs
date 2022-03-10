@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Star Wars Quote App</title>
+</head>
+<style media="screen">
+  body {
+    background-color: rgba(255, 204, 241, 0.7);
+  }
+  .button-wrapper {
+    width: 100%;
+    overflow: hidden;
+  }
+  .add {
+    width: 28%;height: 165px;
+    float: left;
+    padding: 15px;
+    margin: 10px;
+    background: rgba(255, 255, 255, 0.3);
+  }
+  .update {
+    width: 28%;height: 165px;
+    padding: 15px;
+    float: left;
+    margin: 10px;
+    background: rgba(255, 255, 255, 0.3)
+  }
+  .delete {
+    width: 28%;height: 165px;
+    float: left;
+    padding: 15px;
+    margin: 10px;
+    background: rgba(255, 255, 255, 0.3)
+  }
+  .cont{
+    padding: 15px;
+    margin: 10px;
+    background: rgba(255, 255, 255, 0.3)
+  }
+</style>
+<body>
+  <h1> 업데이트 중5...devOps endalgo 테스트용 nodejs + express + mongodb CRUD게시판</h1>
+
+  <div class="button-wrapper">
+    <div class="add">
+      <h2>CREATE 기능</h2>
+      <form action="/quotes" method="POST">
+    	  <input type="text" placeholder="name" name="name">
+    	  <input type="text" placeholder="quote" name="quote">
+    	  <button type="submit">Submit</button>
+    	</form>
+    </div>
+    <div class="update">
+      <h2>UPDATE 기능</h2>
+      <p>
+        업데이트 기능...
+      </p>
+      <button id="update-button">업데이트인데...말입니다.</button>
+    </div>
+
+    <div class="delete">
+      <h2>Remove 기능</h2>
+      <p>
+        삭제 기능...
+      </p>
+      <button id="delete-button">삭제... 수정중</button>
+      <div id="message"></div>
+    </div>
+
+
+  </div>
+
+
+  <div class="cont">
+    <h2> Quotes </h2>
+    <ul class="quotes">
+      <!-- Loop through quotes -->
+      <% for(var i = 0; i < quotes.length; i++) {%>
+        <li class="quote">
+          <!-- Output name from the iterated quote object -->
+          <span><%= quotes[i].name %></span>:
+          <!-- Output quote from the iterated quote object -->
+          <span><%= quotes[i].quote %></span>
+        </li>
+      <% } %>
+    </ul>
+  </div>
+
+
+</body>
+
+<script src="/main.js"></script>
+
+</html>
